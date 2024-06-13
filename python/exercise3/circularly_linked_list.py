@@ -33,14 +33,14 @@ class CircularlyLinkedList:
             self.tail = self.tail.next_node
 
     def add_first(self, e):
-      if self.is_empty():
-        self.tail=Node(e)
-        self.tail.next_node = self.tail # a new list of one element
-      else:
-        newest = Node(e)
-        newest.next_node = self.tail.next_node
-        self.tail.next_node = newest
-      self.size += 1
+        if self.is_empty():
+            self.tail = Node(e)
+            self.tail.next_node = self.tail  # a new list of one element
+        else:
+            newest = Node(e)
+            newest.next_node = self.tail.next_node
+            self.tail.next_node = newest
+        self.size += 1
 
     def add_last(self, e):
         self.add_first(e)
