@@ -13,10 +13,7 @@ class DoublyLinkedList:
         # TO check weather list is empty or not?
 
     def is_empty(self):
-        if self.head is None:
-            return True
-        else:
-            return False
+        return self.head is None
 
     def add_node(self, data):
         #  Creating New Node
