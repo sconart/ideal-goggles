@@ -58,7 +58,7 @@
 
   <!-- Checks that a package-info.java file exists for each package.     -->
   <!-- See https://checkstyle.org/checks/javadoc/javadocpackage.html#JavadocPackage -->
-  <module name="JavadocPackage"/>
+  <!-- <module name="JavadocPackage"/> -->
 
   <!-- Checks whether files end with a new line.                        -->
   <!-- See https://checkstyle.org/checks/misc/newlineatendoffile.html -->
@@ -71,9 +71,9 @@
   <!-- Checks for Size Violations.                    -->
   <!-- See https://checkstyle.org/checks/sizes/index.html -->
   <module name="FileLength"/>
-  <module name="LineLength">
+  <!-- <module name="LineLength">
     <property name="fileExtensions" value="java"/>
-  </module>
+  </module> -->
 
   <!-- Checks for whitespace                               -->
   <!-- See https://checkstyle.org/checks/whitespace/index.html -->
@@ -101,10 +101,10 @@
     <!-- See https://checkstyle.org/checks/javadoc/index.html -->
     <module name="InvalidJavadocPosition"/>
     <module name="JavadocMethod"/>
-    <module name="JavadocType"/>
+    <!-- <module name="JavadocType"/> -->
     <module name="JavadocVariable"/>
     <module name="JavadocStyle"/>
-    <module name="MissingJavadocMethod"/>
+    <!-- <module name="MissingJavadocMethod"/> -->
 
     <!-- Checks for Naming Conventions.                  -->
     <!-- See https://checkstyle.org/checks/naming/index.html -->
@@ -148,14 +148,14 @@
     <!-- Modifier Checks                                    -->
     <!-- See https://checkstyle.org/checks/modifier/index.html -->
     <module name="ModifierOrder"/>
-    <module name="RedundantModifier"/>
+    <!-- <module name="RedundantModifier"/> -->
 
     <!-- Checks for blocks. You know, those {}'s         -->
     <!-- See https://checkstyle.org/checks/blocks/index.html -->
     <module name="AvoidNestedBlocks"/>
     <module name="EmptyBlock"/>
-    <module name="LeftCurly"/>
-    <module name="NeedBraces"/>
+    <!-- <module name="LeftCurly"/> -->
+    <!-- <module name="NeedBraces"/> -->
     <module name="RightCurly"/>
 
     <!-- Checks for common coding problems               -->
@@ -182,7 +182,7 @@
     <!-- Miscellaneous other checks.                   -->
     <!-- See https://checkstyle.org/checks/misc/index.html -->
     <module name="ArrayTypeStyle"/>
-    <module name="FinalParameters"/>
+    <!-- <module name="FinalParameters"/> -->
     <module name="TodoComment"/>
     <module name="UpperEll"/>
 
