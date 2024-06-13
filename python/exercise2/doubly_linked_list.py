@@ -13,38 +13,34 @@ class DoublyLinkedList:
         # TO check weather list is empty or not?
 
     def is_empty(self):
-        if self.head is None:
-            return True
-        else:
-            return False
+        return self.head is None
 
     def add_node(self, data):
         #  Creating New Node
-        newNode = Node(data)
+        new_node = Node(data)
 
         # Checking where the head and tail pointer is pointing.
         # if first node is added to the list then below condition should be
         # true.
         if self.head is None:
-            self.head = newNode
-            newNode.previous = newNode.next = None
+            self.head = new_node
+            new_node.previous = new_node.next = None
 
         else:
             # Addding new node at the last
-            self.tail.next = newNode
-            newNode.previous = self.tail
-            newNode.next = None
-        self.tail = newNode
+            self.tail.next = new_node
+            new_node.previous = self.tail
+            new_node.next = None
+        self.tail = new_node
 
     def display_list(self):
-        # Creating temp pointer to travers
+        # Creating temp pointer to traverse
         temp = self.head
         if temp is not None:
             while temp is not None:
                 print(temp.data, end=" -> ")
                 temp = temp.next
-            else:
-                print("NULL")
+            print("NULL")
         else:
             print("List does not have any nodes")
 
