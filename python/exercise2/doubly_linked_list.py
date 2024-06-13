@@ -23,8 +23,7 @@ class DoublyLinkedList:
         newNode = Node(data)
 
         # Checking where the head and tail pointer is pointing.
-        # if first node is added to the list then below condition should be
-        # true.
+        # if first node is added to the list then below condition should be true.
         if self.head is None:
             self.head = newNode
             newNode.previous = newNode.next = None
@@ -48,40 +47,21 @@ class DoublyLinkedList:
         else:
             print("List does not have any nodes")
 
-    def clone(self):
-        new_list = DoublyLinkedList()
-        current = self.head
-        while current is not None:
-            new_list.add_node(current.data)
-            current = current.next
-        return new_list
 
-    def concatenate(self, list2):
-        if self.is_empty():
-            self.head = list2.head
-            self.tail = list2.tail
-        elif not list2.is_empty():
-            self.tail.next = list2.head
-            list2.head.previous = self.tail
-            self.tail = list2.tail
+def clone_linked_list(l1):
+    dl = DoublyLinkedList()
+    temp = l1.head
+    if temp is not None:
+        while temp is not None:
+            dl.add_node(temp.data)
+            temp = temp.next
+    return dl
 
 
 if __name__ == "__main__":
-    L1 = DoublyLinkedList()
-    L1.add_node("MSP")
-    L1.add_node("ATL")
-    L1.add_node("BOS")
-    L1.display_list()
-
-    L2 = DoublyLinkedList()
-    L2.add_node("LAX")
-    L2.add_node("ABC")
-    L2.add_node("XYZ")
-    L2.add_node("JFK")
-    L2.display_list()
-
-    L = L1.clone()
-    L.concatenate(L2)
-    L1.display_list()
-    L2.display_list()
-    L.display_list()
+    list1 = DoublyLinkedList()
+    list1.add_node("MSP")
+    list1.add_node("ATL")
+    list1.add_node("BOS")
+    # list1.remove_first()
+    print(list1.display_list())
